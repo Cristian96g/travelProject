@@ -9,7 +9,7 @@ const Navbar = () => {
   const [navBar, setNavbar] = useState('menu');
   // function show navbar
   const showNavbar = () => {
-    setNavbar("menu showNavbar");
+    setNavbar("menu showNavBar");
   }
 
   const removeNavbar = () =>{

@@ -12,12 +12,12 @@
   --bgColor: hsl(0, 0%, 100%);
   --formColor: hsl(20, 42%, 87%);
   --whiteColor: hsl(0, 0%, 100%);
-  --blackColor: hsl(0, 0%, 51%);
+  --blackColor: hsl(0, 0%, 18%);
   --greyText: hsl(0, 0%, 51%);
   --inputColor: hsl(330, 12%, 97%);
-  --cardColor: hsl(100, 3%, 94%);
+  --cardColor: hsl(300, 3%, 94%);
   --biggestFontSizes: 2.5rem;
-  --h1FontSize: 2rem;
+  --h1FontSize: 1.6rem;
   --h2FontSize: 1.25rem;
   --h3FontSize: 1rem;
   --normalFontSize: 0.938rem;
@@ -36,13 +36,17 @@ body {
 }
 
 .grid {
-  display: flex;
+  display: grid;
   align-items: center;
   gap: 1.5rem;
 }
 
 p {
   font-size: var(--smallFontSize);
+}
+
+html {
+  font-size: 90%;
 }
 
 a {
@@ -55,6 +59,7 @@ li {
 
 .icon {
   font-size: var(--h2FontSize);
+  cursor: pointer;
 }
 
 img,
@@ -92,7 +97,7 @@ video {
   font-weight: 400;
 }
 
-.setHeading {
+.secHeading {
   padding-bottom: 1.5rem;
 }
 

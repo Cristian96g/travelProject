@@ -32,10 +32,12 @@
     border-bottom: 1.5px solid rgb(211, 211, 211);
     backdrop-filter: blur(5px);
     z-index: 1000;
+    background: rgba(255, 255, 255, 0.737);
 
     .logoDiv {
         display: flex;
         align-items: center;
+        justify-content: center;
 
         span {
             color: var(--blackColor);
@@ -55,23 +57,22 @@
             background: rgba(255, 255, 255, 0.94);
             padding: 2rem;
             border-radius: 10px;
-            transition: .8s ease-in-out;
+            transition: 0.8s ease-in-out;
             backdrop-filter: blur(5px);
             box-shadow: 0 2px 3px 4px rgba(236, 213, 213, 0.516);
 
-        li {
-            font-size: var(--h3FontSize);
-            color: black;
-            font-weight: 500;
-            padding: 1rem 0;
-            text-align: center;
-            cursor: pointer;
-            &:hover {
-                color: var(--primaryColor);
-                border-bottom: 1.5px solid var(--primaryColor);
+            li {
+                font-size: var(--h3FontSize);
+                color: black;
+                font-weight: 500;
+                padding: 1rem 0;
+                text-align: center;
+                cursor: pointer;
+                &:hover {
+                    color: var(--primaryColor);
+                    border-bottom: 1.5px solid var(--primaryColor);
+                }
             }
-        }
-
         }
     }
 
@@ -94,5 +95,56 @@
 
     .showNavBar {
         top: 8rem;
+    }
+}
+
+//Media queries
+@media screen and (min-width: 768px) {
+    .navBar {
+        .logoDiv {
+            span {
+                font-size: var(--h2FontSize);
+            }
+        }
+
+        .closeIcon,
+        .menuIcon {
+            display: none;
+        }
+
+        .menu {
+            ul {
+                display: flex;
+                gap: 1rem;
+
+                li {
+                    font-size: var(--h3FontSize);
+                    font-weight: 500;
+                    padding: 1rem 0;
+                    text-align: center;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--primaryColor);
+                        border-bottom: 1.5px solid var(--primaryColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .navBar {
+        padding: 2rem 6rem;
+        .menu {
+            gap: 4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .navBar {
+        padding: 2rem 14rem;
     }
 }
